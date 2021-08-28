@@ -1,10 +1,18 @@
 .App {
-  text-align: center;
-  color: red;
+ 
   background-color: #b8dfdd;
   padding: 5px;
   margin-top: 20px;
+ 
+}
+h2{
+  text-align: center;
+  color: red;
   text-shadow: 2px 2px #615959;
+}
+p{
+  text-align: center;
+
 }
 
 .App-logo {
