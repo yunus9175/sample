@@ -22,7 +22,7 @@ const Example = (props) => {
   return (
     <div style={{ fontSize: 29 }}>
       <Navbar color="light" light expand="md">
-        <img src={rk} alt="RK contstruction" height={60} />
+        {/* <img src={rk} alt="RK contstruction" height={60} /> */}
         <NavbarBrand href="/" style={{ fontSize: 29 }}>
           reactstrap
         </NavbarBrand>
