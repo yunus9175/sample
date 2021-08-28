@@ -13,16 +13,19 @@ import {
   DropdownItem,
   NavbarText,
 } from 'reactstrap';
-
+import rk from '../assets/image/rk.png';
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
   return (
-    <div>
+    <div style={{ fontSize: 29 }}>
       <Navbar color="light" light expand="md">
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
+        <img src={rk} alt="RK contstruction" height={60} />
+        <NavbarBrand href="/" style={{ fontSize: 29 }}>
+          reactstrap
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className="mr-auto" navbar>
