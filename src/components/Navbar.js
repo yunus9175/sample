@@ -13,7 +13,7 @@ import {
   DropdownItem,
   NavbarText,
 } from 'reactstrap';
-import rk from '../assets/image/rk.png';
+
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -22,7 +22,6 @@ const Example = (props) => {
   return (
     <div style={{ fontSize: 29 }}>
       <Navbar color="light" light expand="md">
-        {/* <img src={rk} alt="RK contstruction" height={60} /> */}
         <NavbarBrand href="/" style={{ fontSize: 29 }}>
           reactstrap
         </NavbarBrand>
