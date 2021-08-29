@@ -13,6 +13,7 @@ import {
   DropdownItem,
 } from 'reactstrap';
 import rk from '../assets/image/rk.png';
+import { Link } from 'react-router-dom';
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -39,6 +40,7 @@ const Example = (props) => {
                 GitHub
               </NavLink>
             </NavItem>
+
             <UncontrolledDropdown nav inNavbar>
               <DropdownToggle nav caret>
                 Options
@@ -57,6 +59,9 @@ const Example = (props) => {
                 <DropdownItem>Computer Fundamental</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
+            <NavItem>
+              <Link to="/">Go to Next Project</Link>
+            </NavItem>
           </Nav>
         </Collapse>
       </Navbar>
