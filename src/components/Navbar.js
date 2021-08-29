@@ -12,8 +12,8 @@ import {
   DropdownMenu,
   DropdownItem,
   NavbarText,
-} from "reactstrap";
-
+} from 'reactstrap';
+import rk from '../assets/image/rk.png';
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -22,6 +22,7 @@ const Example = (props) => {
   return (
     <div style={{ fontSize: 29 }}>
       <Navbar color="light" light expand="md">
+        <img src={rk} alt="RK contstruction" height={60} />
         <NavbarBrand href="/" style={{ fontSize: 29 }}>
           Yusuf page
         </NavbarBrand>
@@ -59,7 +60,7 @@ const Example = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Your comments</NavbarText>
+          {/* <NavbarText>Your comments</NavbarText> */}
         </Collapse>
       </Navbar>
     </div>
