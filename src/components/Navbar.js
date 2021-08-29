@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 import {
   Collapse,
   Navbar,
@@ -11,7 +11,6 @@ import {
   DropdownToggle,
   DropdownMenu,
   DropdownItem,
-  NavbarText,
 } from 'reactstrap';
 import rk from '../assets/image/rk.png';
 const Example = (props) => {
@@ -46,7 +45,6 @@ const Example = (props) => {
               </DropdownToggle>
               <DropdownMenu right>
                 <DropdownItem>
-                 
                   <NavLink
                     href="http://www.yusufengineer.blogspot.com"
                     target="_blank"
@@ -60,7 +58,6 @@ const Example = (props) => {
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          {/* <NavbarText>Your comments</NavbarText> */}
         </Collapse>
       </Navbar>
     </div>
