@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import {
   Collapse,
   Navbar,
@@ -12,7 +12,7 @@ import {
   DropdownMenu,
   DropdownItem,
   NavbarText,
-} from 'reactstrap';
+} from "reactstrap";
 
 const Example = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,7 +23,7 @@ const Example = (props) => {
     <div style={{ fontSize: 29 }}>
       <Navbar color="light" light expand="md">
         <NavbarBrand href="/" style={{ fontSize: 29 }}>
-          reactstrap
+          Yusuf page
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
@@ -32,7 +32,10 @@ const Example = (props) => {
               <NavLink href="/components/">Components</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
+              <NavLink
+                href="https://github.com/reactstrap/reactstrap"
+                target="_blank"
+              >
                 GitHub
               </NavLink>
             </NavItem>
@@ -41,14 +44,22 @@ const Example = (props) => {
                 Options
               </DropdownToggle>
               <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
+                <DropdownItem>
+                 
+                  <NavLink
+                    href="http://www.yusufengineer.blogspot.com"
+                    target="_blank"
+                  >
+                    Electrical Engineering
+                  </NavLink>
+                </DropdownItem>
+                <DropdownItem>Electrical Concepts</DropdownItem>
                 <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
+                <DropdownItem>Computer Fundamental</DropdownItem>
               </DropdownMenu>
             </UncontrolledDropdown>
           </Nav>
-          <NavbarText>Simple Text</NavbarText>
+          <NavbarText>Your comments</NavbarText>
         </Collapse>
       </Navbar>
     </div>
