@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import defaultImg from '../assets/image/noimage.png';
 class NewsItem extends Component {
   constructor() {
     super();
@@ -10,11 +10,7 @@ class NewsItem extends Component {
       <div>
         <div className="card">
           <img
-            src={
-              imageUrl
-                ? imageUrl
-                : 'https://cdn.coingape.com/wp-content/uploads/2021/03/30142946/Ripple-XRP-Price-Surge.jpg'
-            }
+            src={imageUrl === null ? defaultImg : imageUrl}
             className="card-img-top"
             alt="no image"
             height="200"

@@ -23,7 +23,7 @@ class News extends Component {
     };
   }
   async componentDidMount() {
-    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=608f4f6c2b1947039c0bce221e5f7d24&page=1&pageSize=${this.props.pageSize}`;
+    let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=39bee2cde97145189fedd9c1abd896a2&page=1&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
     let parseData = await data.json();
@@ -40,7 +40,7 @@ class News extends Component {
         this.props.country
       }&category=${
         this.props.category
-      }&apiKey=608f4f6c2b1947039c0bce221e5f7d24&page=${
+      }&apiKey=39bee2cde97145189fedd9c1abd896a2&page=${
         this.state.page + 1
       }&pageSize=${this.props.pageSize}`;
       this.setState({ loading: true });
@@ -60,7 +60,7 @@ class News extends Component {
       this.props.country
     }&category=${
       this.props.category
-    }&apiKey=608f4f6c2b1947039c0bce221e5f7d24&page=${
+    }&apiKey=39bee2cde97145189fedd9c1abd896a2&page=${
       this.state.page - 1
     }&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });

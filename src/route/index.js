@@ -9,27 +9,58 @@ export default function App(props) {
       {/* A <Switch> looks through its children <Route>s and
               renders the first one that matches the current URL. */}
       <Switch>
-        <Route exact path="/">
-          <News pageSize={9} country="in" category="general" />
-        </Route>
-        <Route exact path="/business">
-          <News pageSize={9} country="in" category="business" />
-        </Route>
-        <Route exact path="/entertainment">
-          <News pageSize={9} country="in" category="entertainment" />
-        </Route>
-        <Route exact path="/health">
-          <News pageSize={9} country="in" category="health" />
-        </Route>
-        <Route exact path="/science">
-          <News pageSize={9} country="in" category="science" />
-        </Route>
-        <Route exact path="/technology">
-          <News pageSize={9} country="in" category="technology" />
-        </Route>
-        <Route exact path="/sports">
-          <News pageSize={9} country="in" category="sports" />
-        </Route>
+        <Route
+          exact
+          path="/"
+          component={() => (
+            <News category="general" country="in" pageSize={9} />
+          )}
+        />
+
+        <Route
+          exact
+          path="/business"
+          component={() => (
+            <News category="business" country="in" pageSize={9} />
+          )}
+        />
+
+        <Route
+          exact
+          path="/entertainment"
+          component={() => (
+            <News category="entertainment" country="in" pageSize={9} />
+          )}
+        />
+
+        <Route
+          exact
+          path="/health"
+          component={() => <News category="health" country="in" pageSize={9} />}
+        />
+
+        <Route
+          exact
+          path="/science"
+          component={() => (
+            <News category="science" country="in" pageSize={9} />
+          )}
+        />
+
+        <Route
+          exact
+          path="/technology"
+          component={() => (
+            <News category="technology" country="in" pageSize={9} />
+          )}
+        />
+
+        <Route
+          exact
+          path="/sports"
+          component={() => <News category="sports" country="in" pageSize={9} />}
+        />
+
         <Route exact path="/example" component={ContainerCompo} />
       </Switch>
     </Router>
