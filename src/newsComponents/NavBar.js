@@ -29,7 +29,7 @@ export class NavBar extends Component {
               id="navbarSupportedContent"
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
+                {/* <li className="nav-item">
                   <a className="nav-link " aria-current="page" href="#">
                     Home
                   </a>
@@ -38,7 +38,7 @@ export class NavBar extends Component {
                   <a className="nav-link" aria-current="page" href="#">
                     About
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <Link
                     className="nav-link"
