@@ -8,7 +8,8 @@ class NewsItem extends Component {
     const { title, description, imageUrl, newsUrls, tooltip } = this.props;
     return (
       <div>
-        <div className="card">
+        <div className="card position-relative">
+          
           <img
             src={imageUrl === null ? defaultImg : imageUrl}
             className="card-img-top"
@@ -40,6 +41,10 @@ class NewsItem extends Component {
               Read More
             </a>
           </div>
+          <span class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger">
+  {this.props.source.name}
+    <span class="visually-hidden">unread messages</span>
+  </span>
         </div>
       </div>
     );

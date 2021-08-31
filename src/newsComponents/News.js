@@ -26,13 +26,15 @@ class News extends Component {
     let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=39bee2cde97145189fedd9c1abd896a2&page=1&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
+ 
     let parseData = await data.json();
     this.setState({
       articles: parseData.articles,
       totalResults: parseData.totalResults,
       loading: false,
     });
-    console.log('result', this.state.articles);
+    
+   
   }
   handleNext = async () => {
     if (!(this.state.page + 1 > Math.ceil(this.state.totalResults / 3))) {
@@ -88,6 +90,7 @@ class News extends Component {
                       description={
                         item.description && item.description.slice(0, 30)
                       }
+                      source={item.source}
                       imageUrl={!item.urlToImag && item.urlToImage}
                       newsUrls={item.url && item.url}
                     />
