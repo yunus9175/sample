@@ -74,7 +74,7 @@ class News extends Component {
       <>
         <NavBar />
         <div className="container my-3">
-          <h2 className="text-center">Top News Headline:</h2>
+          <h2 className="text-center" style={{textTransform:'capitalize'}}>Top News Headline:{this.props.category}</h2>
           {this.state.loading ? (
             <Spinner />
           ) : (
