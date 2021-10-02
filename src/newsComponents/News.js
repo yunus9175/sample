@@ -86,7 +86,7 @@ class News extends Component {
             <div className="row">
               {this.state.articles &&
                 this.state.articles.map((item, index) => (
-                  <div className="col-md-4 my-2" key={index}>
+                  <div className="col-md-4 my-2 mt-lg-3" key={index}>
                     <NewsItem
                       title={item.title && item.title.slice(0, 30)}
                       tooltip={item.title && item.title}
