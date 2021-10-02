@@ -26,15 +26,13 @@ class News extends Component {
     let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=39bee2cde97145189fedd9c1abd896a2&page=1&pageSize=${this.props.pageSize}`;
     this.setState({ loading: true });
     let data = await fetch(url);
- 
+
     let parseData = await data.json();
     this.setState({
       articles: parseData.articles,
       totalResults: parseData.totalResults,
       loading: false,
     });
-    
-   
   }
   handleNext = async () => {
     if (!(this.state.page + 1 > Math.ceil(this.state.totalResults / 3))) {
@@ -76,7 +74,12 @@ class News extends Component {
       <>
         <NavBar />
         <div className="container my-3">
-          <h2 className="text-center" style={{textTransform:'capitalize'}}>Top News Headline:{this.props.category}</h2>
+          <h2
+            className="text-center"
+            style={{ textTransform: 'capitalize', marginTop: '4rem' }}
+          >
+            Top News Headline:{this.props.category}
+          </h2>
           {this.state.loading ? (
             <Spinner />
           ) : (
@@ -85,10 +88,10 @@ class News extends Component {
                 this.state.articles.map((item, index) => (
                   <div className="col-md-4 my-2" key={index}>
                     <NewsItem
-                      title={item.title && item.title.slice(0, 40)}
+                      title={item.title && item.title.slice(0, 30)}
                       tooltip={item.title && item.title}
                       description={
-                        item.description && item.description.slice(0, 30)
+                        item.description && item.description.slice(0, 40)
                       }
                       source={item.source}
                       imageUrl={!item.urlToImag && item.urlToImage}

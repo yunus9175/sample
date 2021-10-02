@@ -3,7 +3,16 @@ import { Link } from 'react-router-dom';
 const NavBar = () => {
   return (
     <div>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark text-danger">
+      <nav
+        className="fixed-top navbar navbar-expand-lg navbar-dark bg-dark text-danger"
+        // style={{
+        //   position: 'fixed',
+        //   top: 0,
+        //   width: '100%',
+        //   zIndex: 100,
+        //   // marginTop: '5.5rem',
+        // }}
+      >
         <div className="container-fluid">
           <a className="navbar-brand" href="/">
             India News
