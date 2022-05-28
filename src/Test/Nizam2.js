@@ -1,5 +1,3 @@
-const Nizam2=()=>{
-    return(
-        Nizam2
-    )
-}
+const Nizam23 = () => {
+  return Nizam3;
+};
